@@ -8,21 +8,18 @@
 html, body {
     height: 100%;
     width: 100%;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-    background: #1F2937; /* Dark background */
-    color: #F4F7FF; /* Light text color for contrast */
-    display: flex;
-    justify-content: flex-start;
-    align-items: stretch;
+    background: #F4F7FF; /* Light background */
+    color: #333; /* Dark text color */
 }
 
 body {
-    overflow: hidden;
+    overflow-x: hidden;  /* Prevent horizontal scrolling */
 }
 
-/* Remove list styling */
+/* Remove default list styles */
 ul, ol {
     list-style: none;
 }
@@ -42,20 +39,20 @@ input:focus, button:focus, textarea:focus, select:focus {
     box-shadow: none;
 }
 
-/* Remove links' underline and ensure proper text styling */
+/* Remove links' underline */
 a {
     text-decoration: none;
     color: inherit;
 }
 
-/* Remove default table styles */
+/* Table styling */
 table {
     border-collapse: collapse;
     width: 100%;
 }
 
 th, td {
-    padding: 8px;
+    padding: 12px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
