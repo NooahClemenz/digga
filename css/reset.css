@@ -8,24 +8,18 @@
 html, body {
     height: 100%;
     width: 100%;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-}
-
-body {
-    background: #141e30;  /* Dark background color for the body */
-    color: #F4F7FF;  /* Text color for light contrast */
+    background: #1F2937; /* Dark background */
+    color: #F4F7FF; /* Light text color for contrast */
     display: flex;
     justify-content: flex-start;
     align-items: stretch;
 }
 
-/* Ensure that images and media are not stretched or out of place */
-img, picture, video {
-    max-width: 100%;
-    display: block;
-    height: auto;
+body {
+    overflow: hidden;
 }
 
 /* Remove list styling */
@@ -64,11 +58,6 @@ th, td {
     padding: 8px;
     text-align: left;
     border-bottom: 1px solid #ddd;
-}
-
-/* Ensure elements are sized correctly */
-* {
-    box-sizing: inherit;
 }
 
 /* Prevent the browser from adding space around iframes */
