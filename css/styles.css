@@ -13,7 +13,695 @@ body {
     color: #F1F5F9;
     min-height: 100vh;
 }
+/* Reset and Base Styles */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    background: #0F172A;
+    color: #F1F5F9;
+    min-height: 100vh;
+}
+
+input[type="text"], input[type="password"], button {
+    outline: none; /* Remove default outline */
+    box-shadow: none; /* Remove shadow */
+    border: none; /* Remove border */
+}
+
+input[type="text"]:focus, input[type="password"]:focus, button:focus {
+    outline: none; /* Ensure no outline on focus */
+    box-shadow: none; /* Ensure no shadow on focus */
+}
+
+input[type="text"], input[type="password"] {
+    background: transparent; /* Make background transparent to remove any default browser styles */
+    border-bottom: 1px solid #ccc; /* Add a custom bottom border if desired */
+    padding: 10px; /* Add padding for aesthetics */
+    transition: border-bottom-color 0.3s; /* Smooth transition for border color */
+}
+
+input[type="text"]:hover, input[type="password"]:hover {
+    border-bottom-color: #999; /* Change border color on hover if desired */
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-bottom-color: #555; /* Change border color on focus if desired */
+}
+
+button {
+    background-color: transparent; /* Ensure no background color */
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none; /* Ensure no outline on focus */
+}
+
+/* Login & Register Pages */
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+}
+
+.login-card {
+    background: #1E293B;
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    border: 1px solid #334155;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login-header h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #F1F5F9;
+    margin-bottom: 0.5rem;
+}
+
+.login-header p {
+    color: #94A3B8;
+    font-size: 0.875rem;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.form-group {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #64748B;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.875rem 1rem 0.875rem 3rem;
+    background: #0F172A;
+    border: 1px solid #334155;
+    border-radius: 0.5rem;
+    color: #F1F5F9;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #3B82F6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+.form-group input::placeholder {
+    color: #64748B;
+}
+
+.form-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #94A3B8;
+    font-size: 0.875rem;
+}
+
+.remember-me input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid #334155;
+    background: #0F172A;
+}
+
+.forgot-password {
+    color: #3B82F6;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.forgot-password:hover {
+    color: #60A5FA;
+}
+
+.login-button, .discord-button {
+    width: 100%;
+    padding: 0.875rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-weight: 600;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.login-button {
+    background: #3B82F6;
+    color: #F1F5F9;
+}
+
+.login-button:hover {
+    background: #2563EB;
+    transform: translateY(-1px);
+}
+
+.divider {
+    position: relative;
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.divider2 {
+    position: relative;
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+.divider::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    background: #334155;
+}
+
+.divider span {
+    position: relative;
+    background: #1E293B;
+    padding: 0 1rem;
+    color: #94A3B8;
+    font-size: 0.875rem;
+}
+
+.discord-button {
+    background: #5865F2;
+    color: #F1F5F9;
+}
+
+.discord-button:hover {
+    background: #4752C4;
+    transform: translateY(-1px);
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #94A3B8;
+    font-size: 0.875rem;
+}
+
+.signup-link a {
+    color: #3B82F6;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.signup-link a:hover {
+    color: #60A5FA;
+}
+
+/* Dashboard Layout */
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 280px;
+    background: #1E293B;
+    padding: 2rem 1rem;
+    border-right: 1px solid #334155;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.sidebar-header {
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+
+}
+
+.sidebar-header h2 {
+    color: #F1F5F9;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    color: #94A3B8;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+}
+
+.nav-item:hover {
+    background: #334155;
+    color: #F1F5F9;
+}
+
+.nav-item.active {
+    background: #3B82F6;
+    color: #F1F5F9;
+}
+
+.nav-item svg {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.logout {
+    margin-top: auto;
+    color: #EF4444;
+}
+
+.logout:hover {
+    background: #991B1B;
+    color: #F1F5F9;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    margin-left: 280px;
+    padding: 2rem;
+}
+
+.section {
+    display: none;
+    animation: fadeIn 0.3s ease-in-out;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Overview Section */
+.overview-container {
+    background: #1E293B;
+    border-radius: 1rem;
+    border: 1px solid #334155;
+    overflow: hidden;
+}
+
+.overview-header {
+    background: #2C3E50;
+    padding: 1.5rem;
+    border-bottom: 1px solid #334155;
+}
+
+.overview-header h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #F1F5F9;
+    margin-bottom: 0.5rem;
+}
+
+.overview-header p {
+    color: #94A3B8;
+}
+
+.info-list {
+    padding: 1rem;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #334155;
+    transition: background-color 0.2s;
+}
+
+.info-item:hover {
+    background: #2C3E50;
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    color: #94A3B8;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.info-value {
+    color: #F1F5F9;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    background: #374151;
+    border-radius: 0.5rem;
+    font-family: monospace;
+}
+
+.info-value.status-active {
+    background: #065F46;
+    color: #ECFDF5;
+}
+
+.info-value.status-premium {
+    background: #7C3AED;
+    color: #F5F3FF;
+}
+
+.settings-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 2rem;
+    align-items: stretch; /* Stretch items to fill the grid row */
+    justify-items: stretch; /* Stretch items to fill the grid column */
+}
+
+.settings-card {
+    background: #1E293B;
+    border-radius: 1rem;
+    border: 1px solid #334155;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%; /* Full width within the grid column */
+    height: 100%; /* Full height within the grid column */
+}
+
+.settings-card-header {
+    background: #2C3E50;
+    padding: 1.5rem;
+    border-bottom: 1px solid #334155;
+    text-align: center;
+}
+
+.settings-card-header h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #F1F5F9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.settings-card-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1; /* Allow the body to grow and fill the card */
+    justify-content: center; /* Center content vertically */
+}
+
+.settings-card-body form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+    align-items: center; /* Center items horizontally */
+}
+
+.settings-card-body .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.settings-card-body label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #94A3B8;
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+.settings-card-body input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: #0F172A;
+    border: 1px solid #334155;
+    border-radius: 0.5rem;
+    color: #F1F5F9;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+}
+
+.settings-card-body input:focus {
+    outline: none;
+    border-color: #3B82F6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: #3B82F6;
+    color: #F1F5F9;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 1rem;
+}
+
+.button:hover {
+    background: #2563EB;
+    transform: translateY(-1px);
+}
+
+.button svg {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+/* Downloads Grid */
+.downloads-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: stretch; /* Stretch items to fill the grid row */
+    justify-items: stretch; /* Stretch items to fill the grid column */
+}
+
+.download-card {
+    background: #1E293B;
+    border-radius: 1rem;
+    border: 1px solid #334155;
+    overflow: hidden;
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%; /* Full width within the grid column */
+}
+
+.download-card:hover {
+    transform: translateY(-2px);
+}
+
+.download-card-header {
+    background: #2C3E50;
+    padding: 1.5rem;
+    border-bottom: 1px solid #334155;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.download-card-header h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #F1F5F9;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.version-tag {
+    background: #374151;
+    color: #94A3B8;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.download-card-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex-grow: 1; /* Allow the body to grow and fill the card */
+}
+
+.download-info {
+    color: #94A3B8;
+}
+
+.download-info p {
+    margin-bottom: 1rem;
+}
+
+.feature-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #94A3B8;
+    font-size: 0.875rem;
+}
+
+.feature-list li::before {
+    content: "â€¢";
+    color: #3B82F6;
+    font-weight: bold;
+}
+
+.download-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.875rem;
+    background: #3B82F6;
+    color: #F1F5F9;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.download-button:hover {
+    background: #2563EB;
+    transform: translateY(-1px);
+}
+
+.download-button svg {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .downloads-grid {
+        padding: 1rem;
+    }
+    
+    .download-card {
+        max-width: 100%;
+    }
+}
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .settings-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .overview-container {
+        padding: 1rem;
+    }
+    
+    .info-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .info-value {
+        width: 100%;
+        text-align: center;
+    }
+
+    .login-card {
+        padding: 1.5rem;
+    }
+}
 input[type="text"], input[type="password"], button {
     outline: none; /* Remove default outline */
     box-shadow: none; /* Remove shadow */
