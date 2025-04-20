@@ -1,108 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Dashboard</title>
-    <link rel="stylesheet" href="css/reset.css"> <!-- Reset CSS -->
-    <link rel="stylesheet" href="css/styles.css"> <!-- Custom Styles -->
+    <title>Login Panel</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="dashboard">
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <div class="sidebar-header">
-                <h1>Dashboard</h1>
+    <div class="login-container">
+        <h2>Willkommen zurück!</h2>
+        <form action="login.php" method="POST">
+            <div class="input-group">
+                <label for="username">Benutzername:</label>
+                <input type="text" id="username" name="username" required>
             </div>
-            <nav class="sidebar-nav">
-                <a href="#" class="nav-item active" data-section="combat">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                        <polyline points="9 22 9 12 15 12 15 22" />
-                    </svg>
-                    Combat
-                </a>
-                <a href="#" class="nav-item" data-section="visuals">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M6 6h15l-1.68 8H6z" />
-                        <circle cx="10" cy="21" r="1" />
-                        <circle cx="17" cy="21" r="1" />
-                        <path d="M6 6L4 2H1" />
-                    </svg>
-                    Visuals
-                </a>
-                <a href="#" class="nav-item" data-section="settings">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M12 2a5 5 0 0 1 5 5v4h3a2 2 0 0 1 2 2v7h-5v4a5 5 0 0 1-10 0v-4H5v-7a2 2 0 0 1 2-2h3V7a5 5 0 0 1 5-5z" />
-                    </svg>
-                    Settings
-                </a>
-            </nav>
-        </div>
-
-        <!-- Main Content -->
-        <div class="main-content">
-            <section id="combat" class="section active">
-                <div class="card">
-                    <div class="card-header">
-                        <h3>Combat Settings</h3>
-                    </div>
-                    <div class="card-content">
-                        <label for="toggle">Toggle</label>
-                        <input type="checkbox" id="toggle">
-                        <label for="showFov">Show FOV</label>
-                        <input type="checkbox" id="showFov">
-                        <label for="ignoreNpcs">Ignore NPCs</label>
-                        <input type="checkbox" id="ignoreNpcs">
-                    </div>
-                </div>
-            </section>
-
-            <section id="visuals" class="section">
-                <div class="card">
-                    <div class="card-header">
-                        <h3>Visual Settings</h3>
-                    </div>
-                    <div class="card-content">
-                        <label for="fieldOfView">Field of View</label>
-                        <input type="range" id="fieldOfView" min="1" max="180" value="90">
-                        <label for="smooth">Smooth</label>
-                        <input type="range" id="smooth" min="1" max="20" value="10">
-                        <label for="maxDistance">Max Distance</label>
-                        <input type="range" id="maxDistance" min="1" max="1000" value="240">
-                    </div>
-                </div>
-            </section>
-
-            <section id="settings" class="section">
-                <div class="card">
-                    <div class="card-header">
-                        <h3>Settings</h3>
-                    </div>
-                    <div class="card-content">
-                        <label for="bind">Bind</label>
-                        <input type="text" id="bind" placeholder="None">
-                        <button class="button">Save Settings</button>
-                    </div>
-                </div>
-            </section>
-        </div>
+            <div class="input-group">
+                <label for="password">Passwort:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Einloggen</button>
+        </form>
     </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script>
-        document.querySelectorAll('.nav-item').forEach(item => {
-            item.addEventListener('click', function() {
-                const section = this.getAttribute('data-section');
-                document.querySelectorAll('.section').forEach(sec => {
-                    sec.classList.remove('active');
-                });
-                document.getElementById(section).classList.add('active');
-            });
-        });
-    </script>
 </body>
-
 </html>
