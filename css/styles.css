@@ -1,212 +1,52 @@
-/* General Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: 'Roboto', sans-serif;
-    background: #1E1E2F; /* Dark background */
-    color: #EDEDED; /* Light gray text */
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     display: flex;
-    height: 100vh;
-    justify-content: flex-start;
-    align-items: stretch;
-}
-
-/* Sidebar Styling */
-.sidebar {
-    width: 280px;
-    background: #2B2B3D; /* Dark blue-purple color */
-    padding: 20px;
-    position: fixed;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-.sidebar-header h1 {
-    font-size: 2rem;
-    color: #9B4DE1; /* Purple color */
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 1.5rem;
-}
-
-.sidebar-nav {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.nav-item {
-    padding: 12px;
-    color: #EDEDED;
-    font-size: 1rem;
-    border-radius: 10px;
-    text-decoration: none;
-    display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 10px;
-    transition: all 0.3s ease;
+    height: 100vh;
+    margin: 0;
 }
 
-.nav-item:hover {
-    background: #9B4DE1; /* Purple hover effect */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    transform: translateX(5px);
+.login-container {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    border-radius: 5px;
 }
 
-.nav-item.active {
-    background: #7D3EBD; /* Darker purple for active state */
-    color: #fff;
+h2 {
+    text-align: center;
 }
 
-.nav-item svg {
-    width: 20px;
-    height: 20px;
+.input-group {
+    margin-bottom: 15px;
 }
 
-/* Main Content */
-.main-content {
-    margin-left: 280px;
-    padding: 2rem;
-    background: #292A36; /* Darker background for main content */
-    flex-grow: 1;
-    height: 100%;
-    overflow-y: auto;
-}
-
-/* Section Styles */
-.section {
-    display: none;
-}
-
-.section.active {
+.input-group label {
     display: block;
+    margin-bottom: 5px;
 }
 
-/* Card Styling */
-.card {
-    background: #3B3B4F; /* Dark card background */
-    border-radius: 12px;
-    padding: 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
-    transition: all 0.3s ease;
-}
-
-.card:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.card-header {
-    font-size: 1.25rem;
-    color: #EDEDED;
-    margin-bottom: 1.5rem;
-}
-
-.card-content {
-    font-size: 1rem;
-    color: #D1D1D1;
-}
-
-/* Button Styling */
-.button {
-    padding: 12px 24px;
-    background: #9B4DE1; /* Purple color for buttons */
-    color: #fff;
-    border-radius: 25px;
-    font-size: 16px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    border: none;
-}
-
-.button:hover {
-    background: #7D3EBD;
-    transform: translateY(-3px);
-}
-
-/* Input Fields */
-input[type="text"], input[type="range"] {
-    padding: 12px 16px;
-    border-radius: 8px;
-    background: #F1F5F9;
-    border: 1px solid #D1D5DB;
-    font-size: 1rem;
-    color: #333;
-    margin-bottom: 1rem;
+.input-group input {
     width: 100%;
-    box-sizing: border-box;
-    transition: all 0.3s ease;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-input[type="text"]:focus, input[type="range"]:focus {
-    border-color: #9B4DE1; /* Purple border on focus */
-    box-shadow: 0 0 5px rgba(155, 77, 225, 0.5);
-}
-
-input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-    background: #D1D5DB;
-    border-radius: 4px;
-    border: none;
-    transition: background 0.3s ease;
-}
-
-input[type="checkbox"]:checked {
-    background: #9B4DE1; /* Purple when checked */
-}
-
-/* Logout Button */
-.logout-button {
-    background: #EF4444; /* Red for logout */
-    color: #fff;
-    padding: 12px 24px;
-    border-radius: 25px;
-    font-size: 16px;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    border: none;
+button {
     width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.logout-button:hover {
-    background: #991B1B;
-    transform: translateY(-3px);
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .sidebar {
-        width: 220px;
-    }
-    
-    .main-content {
-        margin-left: 220px;
-    }
-}
-
-@media (max-width: 768px) {
-    .sidebar {
-        position: relative;
-        width: 100%;
-        height: auto;
-    }
-
-    .main-content {
-        margin-left: 0;
-    }
-
-    .card {
-        padding: 1rem;
-    }
+button:hover {
+    background-color: #45a049;
 }
