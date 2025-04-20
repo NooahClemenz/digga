@@ -1,29 +1,36 @@
-/* Reset and Base Styles */
+/* Reset und Basis-Stile */
 *, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
+html, body {
+    height: 100%;  /* Der Body und html müssen 100% der Höhe einnehmen */
+    width: 100%;   /* Der Body und html müssen auch 100% der Breite einnehmen */
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     background: #141e30;
     color: #f4f4f4;
-    min-height: 100vh;
     display: flex;
-    justify-content: flex-start;
+    flex-direction: row;  /* Der Body hat eine horizontale Ausrichtung (für Sidebar + Main-Content) */
 }
 
-/* Sidebar Styles */
+body {
+    overflow: hidden;  /* Verhindert das Scrollen des Body */
+}
+
+/* Sidebar Stile */
 .sidebar {
     width: 250px;
     background: #2D3748;
     padding: 20px;
     position: fixed;
-    height: 100%;
-    border-right: 2px solid #4A5568;
+    height: 100%;   /* Sidebar nimmt 100% der Bildschirmhöhe ein */
+    top: 0;
+    left: 0;
     z-index: 100;
+    overflow-y: auto;  /* Scrollen innerhalb der Sidebar falls der Inhalt zu groß wird */
 }
 
 .sidebar-header h1 {
@@ -64,14 +71,17 @@ body {
     margin-right: 10px;
 }
 
-/* Main Content Styles */
+/* Hauptinhalt Stile */
 .main-content {
-    margin-left: 250px;
+    margin-left: 250px;  /* Der Hauptinhalt verschiebt sich nach rechts, um Platz für die Sidebar zu schaffen */
     padding: 2rem;
     background: #1A202C;
-    flex-grow: 1;
+    flex-grow: 1;  /* Der Hauptinhalt nimmt den restlichen verfügbaren Platz ein */
+    height: 100vh;  /* Höhe auf 100% setzen, damit der Inhalt den gesamten Bildschirm ausfüllt */
+    overflow-y: auto;  /* Ermöglicht das Scrollen innerhalb des Inhalts, falls nötig */
 }
 
+/* Abschnitt-Stile */
 .section {
     display: none;
 }
@@ -80,12 +90,13 @@ body {
     display: block;
 }
 
-/* Overview Section */
+/* Übersicht Sektion */
 .overview-container {
     background: #2D3748;
     border-radius: 1.25rem;
     border: 2px solid #4A5568;
     padding: 2rem;
+    height: 100%;
 }
 
 .overview-header {
@@ -137,7 +148,7 @@ body {
     background: #8E2DE2;
 }
 
-/* Settings Section */
+/* Settings Sektion */
 .settings-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -201,7 +212,7 @@ body {
     background: #3B82F6;
 }
 
-/* Download Section */
+/* Download Sektion */
 .downloads-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
