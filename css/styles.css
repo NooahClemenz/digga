@@ -97,12 +97,18 @@ body {
     border: 2px solid #4A5568;
     padding: 2rem;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;  /* Zentriert den Inhalt horizontal */
 }
 
 .overview-header {
     background: #1A202C;
     padding: 20px;
     border-bottom: 2px solid #4A5568;
+    width: 100%;  /* Stellt sicher, dass der Header die gesamte Breite einnimmt */
+    text-align: center;  /* Zentriert den Text im Header */
 }
 
 .overview-header h2 {
@@ -112,6 +118,11 @@ body {
 
 .info-list {
     padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    align-items: center;  /* Zentriert die Info-Elemente */
 }
 
 .info-item {
@@ -121,6 +132,7 @@ body {
     padding: 12px 0;
     border-bottom: 2px solid #4A5568;
     transition: background 0.3s ease;
+    width: 100%;  /* Stellt sicher, dass Info-Items die gesamte Breite einnehmen */
 }
 
 .info-item:hover {
@@ -146,6 +158,27 @@ body {
 
 .info-value.status-premium {
     background: #8E2DE2;
+}
+
+/* Logout Button */
+.logout {
+    background: #EF4444;  /* Rot für den Logout-Button */
+    color: #fff;
+    padding: 14px 24px;
+    border-radius: 25px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: block;
+    margin-top: 20px;
+    width: 100%;  /* Macht den Button so breit wie der Container */
+}
+
+.logout:hover {
+    background: #991B1B;
+    transform: translateY(-3px);
 }
 
 /* Settings Sektion */
