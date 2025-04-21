@@ -1,845 +1,137 @@
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="KXZ Project - Quality accounts, spoofers, cheats & more" />
+    <title>KXZ Project</title>
 
+    <!-- Link to external stylesheets -->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="built.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="custom.css" />
     
+    <link rel="icon" href="https://imagedelivery.net/HL_Fwm__tlvUGLZF2p74xw/5fc2cc0e-09aa-4540-ff1d-37a163486100/public" type="image/png" />
+    <meta property="og:title" content="KXZ Project" />
+    <meta property="og:description" content="The number one destination for quality accounts, spoofers, cheats & more." />
+    <meta property="og:image" content="https://imagedelivery.net/HL_Fwm__tlvUGLZF2p74xw/5fc2cc0e-09aa-4540-ff1d-37a163486100/public" />
+    <meta name="theme-color" content="#7800d2" />
 
-
-
-
-
-
-<title>KXZ Project</title>
-<meta name="description" content="">
-
-<link rel="icon" type="image/png" href="https://imagedelivery.net/HL_Fwm__tlvUGLZF2p74xw/5fc2cc0e-09aa-4540-ff1d-37a163486100/public">
-
-<meta property="og:title" content="KXZ Project">
-<meta property="og:description" content="">
-
-<meta property="og:image" content="https://imagedelivery.net/HL_Fwm__tlvUGLZF2p74xw/5fc2cc0e-09aa-4540-ff1d-37a163486100/public">
-
-<meta name="twitter:title" content="KXZ Project">
-<meta name="twitter:description" content="">
-
-<meta name="twitter:card" content="summary">
-
-<meta name="theme-color" content="#7800d2" />
-    
-    
-      <style>[data-dsr] { visibility: hidden; }</style>
-    
-    
-    <link href="/assets/69444/built.css?v=1739700631583" rel="stylesheet"/>
-    <link href="/assets/69444/custom.css?v=1741808501320" rel="stylesheet"/>
-
-    <style id="theme-styles">
-      :root {
-        --cl-accent: 120,0,210;
-        --cl-background: 5,5,5;
-        --cl-t-primary: 255,255,255;
-        --cl-t-accent: 255,255,255;
-      }
-
-      body {
-        font-family: 'Exo 2', sans-serif;
-      }
-    </style>
-
-    
-      <script src="https://cdn.jsdelivr.net/npm/@datarose/scrollreveal@1.3.0/dist/scrollreveal.min.js" type="module"></script>
-      <script type="module">
-        const dSR = window.DataroseScrollReveal({
-          origin: 'bottom',
-          distance: '0px',
-          duration: 600,
-          delay: 0,
-          rotate: { x: 0, y: 0, z: 0 },
-          opacity: 0,
-          scale: 1,
-          easing: 'cubic-bezier(0.5, 0, 0, 1)',
-          container: window.document.documentElement,
-          mobile: true,
-          reset: false,
-          useDelay: 'always',
-          viewFactor: 0.0,
-          viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
-          beforeReveal: function (domEl) {},
-          beforeReset: function (domEl) {},
-          afterReveal: function (domEl) {},
-          afterReset: function (domEl) {}
-        });
-        
-        if (dSR.isSupported()) {
-          const scrollRevealElements = document.querySelectorAll('[data-dsr]');
-
-          if (scrollRevealElements.length) {
-            scrollRevealElements.forEach((element) => {
-              dSR.reveal(element);
-            });
-          }
-        }
-      </script>
-    
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet" id="theme-font">
+    <!-- Fonts and other external resources -->
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet" integrity="sha256-5uKiXEwbaQh9cgd2/5Vp6WmMnsUr3VZZw0a8rKnOKNU=" crossorigin="anonymous" />
-    <link href="https://cdn.jsdelivr.net/npm/choices.js@10.2.0/public/assets/styles/choices.min.css" rel="stylesheet" integrity="sha256-gS3HxgWFFFqEo0wQoALebu5XlWdYr3gqd4/Tk5wt8Ig=" crossorigin="anonymous" />
-    <link href="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.3.3/src/lite-yt-embed.css" rel="stylesheet" integrity="sha256-qwd4FE0YEnXtN1D9SlLRzgZ35aJTclA5jg1poUQA3dE=" crossorigin="anonymous" />
   </head>
-  <body class="dSR" style="background-color: rgb(5,5,5);">
-    
-    
-    <div class="flex flex-col justify-between min-h-screen relative" id="app" x-data="app">
-      <div>
-        <header class="sticky top-0 z-[1]">
-          <div class="announcement component hidden" data-component-id="announcement">
-  <div class="p-2 bg-accent-500 text-t-accent text-sm text-center relative z-30">
-    
-      <div
-        x-data="{
-          duration: 3000,
-          activeIndex: 0,
-          interval: null,
-          startInterval() {
-            this.interval = setInterval(() => {
-              this.activeIndex = (this.activeIndex + 1) % 0;
-            }, this.duration);
-          }
-        }"
-        x-init="startInterval"
-        class="overflow-hidden h-5"
-      >
-        
-      </div>
-    
-  </div>
-</div>
-          <nav class="component" data-component-id="navbar">
-  <div x-data="navbar">
-    <div class="bg-background/50 backdrop-blur-2xl shadow-md">
-      <div class="mx-auto max-w-screen-2xl p-4">
-        <div class="flex justify-between items-center relative z-30">
-          <a href="https://kxz.mysellauth.com/" class="flex justify-start items-center gap-4 grow basis-0">
-            
-            <img
-              src="https://imagedelivery.net/HL_Fwm__tlvUGLZF2p74xw/5fc2cc0e-09aa-4540-ff1d-37a163486100/public"
-              alt="KXZ Project"
-              class="max-h-10 rounded-lg"
-            />
-            
-            
-          </a>
-          <div class="hidden lg:flex justify-center items-center gap-2">
-            
-            
-            
-            
-            
 
-            
-            
-            
-
-            <a
-              href="https://kxz.mysellauth.com/"
-              target=""
-              class="px-6 py-2 rounded-full text-base font-medium border-2 text-gray-100 border-transparent hover:text-t-primary"
-            >
-              HOME
-            </a>
-            
-            
-            
-
-            
-            
-            
-
-            <a
-              href="https://kxz.mysellauth.com/#products"
-              target=""
-              class="px-6 py-2 rounded-full text-base font-medium border-2 text-t-primary/70 opacity-50 border-transparent hover:opacity-100"
-            >
-              PRODUCTS
-            </a>
-            
-            
-            
-
-            
-            
-            
-
-            <a
-              href="https://kxz.mysellauth.com/feedback"
-              target=""
-              class="px-6 py-2 rounded-full text-base font-medium border-2 text-t-primary/70 opacity-50 border-transparent hover:opacity-100"
-            >
-              REVIEWS
-            </a>
-            
+  <body class="dSR">
+    <div class="flex flex-col justify-between min-h-screen relative" id="app">
+      <header class="sticky top-0 z-[1]">
+        <div class="announcement component hidden">
+          <div class="p-2 bg-accent-500 text-t-accent text-sm text-center relative z-30">
+            <!-- Announcement Section -->
           </div>
-          <div class="hidden lg:flex justify-end items-center gap-4 grow basis-0">
-            
-            
-            
-            
-            
-            <a
-              href="https://customer.sellauth.com/kxz"
-              target=""
-              class="px-6 py-2 rounded-full inline-flex items-center gap-4 border-2  font-semibold bg-accent-500 border-accent-500 text-t-accent hover:bg-accent-500/50 hover:text-t-primary transition-colors duration-300 ease-in-out"
-            >
-              DASHBOARD
-            </a>
-            
-            
-              <a href="https://kxz.mysellauth.com/cart" class="inline-flex items-center justify-center p-2.5 relative font-semibold rounded-full border-2 bg-white/5 border-white/5 text-t-primary hover:bg-white/10 hover:text-t-primary transition-colors duration-300 ease-in-out">
-                <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 24 24"><path fill="currentColor" d="M7 22q-.825 0-1.412-.587T5 20t.588-1.412T7 18t1.413.588T9 20t-.587 1.413T7 22m10 0q-.825 0-1.412-.587T15 20t.588-1.412T17 18t1.413.588T19 20t-.587 1.413T17 22M6.15 6l2.4 5h7l2.75-5zM5.2 4h14.75q.575 0 .875.513t.025 1.037l-3.55 6.4q-.275.5-.737.775T15.55 13H8.1L7 15h11q.425 0 .713.288T19 16t-.288.713T18 17H7q-1.125 0-1.7-.987t-.05-1.963L6.6 11.6L3 4H2q-.425 0-.712-.288T1 3t.288-.712T2 2h1.625q.275 0 .525.15t.375.425zm3.35 7h7z"/></svg>
-                <template x-if="appCart.countWithQuantities > 0">
-                  <span class="absolute -top-2 -right-2 inline-flex items-center justify-center size-5 bg-accent-500 text-white text-[0.625rem] rounded-full" x-text="appCart.countWithQuantities">
-                </template>
-              </a>
-            
-          </div>
-          <div class="lg:hidden">
-            <div class="relative flex items-center gap-3 max-h-10 lg:hidden">
-              
-                <a href="https://kxz.mysellauth.com/cart" class="inline-flex items-center justify-center relative text-t-primary hover:text-accent-500 transition-colors duration-300 ease-in-out">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="size-6" viewBox="0 0 24 24"><path fill="currentColor" d="M7 22q-.825 0-1.412-.587T5 20t.588-1.412T7 18t1.413.588T9 20t-.587 1.413T7 22m10 0q-.825 0-1.412-.587T15 20t.588-1.412T17 18t1.413.588T19 20t-.587 1.413T17 22M6.15 6l2.4 5h7l2.75-5zM5.2 4h14.75q.575 0 .875.513t.025 1.037l-3.55 6.4q-.275.5-.737.775T15.55 13H8.1L7 15h11q.425 0 .713.288T19 16t-.288.713T18 17H7q-1.125 0-1.7-.987t-.05-1.963L6.6 11.6L3 4H2q-.425 0-.712-.288T1 3t.288-.712T2 2h1.625q.275 0 .525.15t.375.425zm3.35 7h7z"/></svg>
-                  <template x-if="appCart.countWithQuantities > 0">
-                    <span class="absolute -top-3 -right-3 inline-flex items-center justify-center size-[1.125rem] bg-accent-500 text-white text-[0.625rem] rounded-full">
-                      <span x-text="appCart.countWithQuantities > 9 ? '9+' : appCart.countWithQuantities"></span>
-                    </span>
-                  </template>
+        </div>
+
+        <!-- Navigation -->
+        <nav>
+          <div class="bg-background/50 backdrop-blur-2xl shadow-md">
+            <div class="mx-auto max-w-screen-2xl p-4">
+              <div class="flex justify-between items-center">
+                <a href="/" class="flex justify-start items-center gap-4">
+                  <img src="https://imagedelivery.net/HL_Fwm__tlvUGLZF2p74xw/5fc2cc0e-09aa-4540-ff1d-37a163486100/public" alt="KXZ Project" class="max-h-10 rounded-lg" />
                 </a>
-              
-              <button @click="toggleMobileMenu" x-ref="mobileMenuBtn" class="p-6">
-                <div class="m-auto h-0.5 w-5 rounded bg-gray-300 transition duration-300" x-bind:class="{ 'translate-y-1.5 rotate-45': showMobileMenu }"></div>
-                <div class="m-auto mt-2 h-0.5 w-5 rounded bg-gray-300 transition duration-300" x-bind:class="{ '-translate-y-1 -rotate-45': showMobileMenu }"></div>
-              </button>
+
+                <div class="hidden lg:flex justify-center items-center gap-2">
+                  <a href="/" class="px-6 py-2 rounded-full text-base font-medium border-2 text-gray-100 border-transparent hover:text-t-primary">HOME</a>
+                  <a href="#products" class="px-6 py-2 rounded-full text-base font-medium border-2 text-t-primary/70 opacity-50 border-transparent hover:opacity-100">PRODUCTS</a>
+                  <a href="/feedback" class="px-6 py-2 rounded-full text-base font-medium border-2 text-t-primary/70 opacity-50 border-transparent hover:opacity-100">REVIEWS</a>
+                </div>
+
+                <div class="hidden lg:flex justify-end items-center gap-4">
+                  <a href="/dashboard" class="px-6 py-2 rounded-full inline-flex items-center gap-4 border-2 font-semibold bg-accent-500 border-accent-500 text-t-accent hover:bg-accent-500/50 hover:text-t-primary transition-colors duration-300 ease-in-out">DASHBOARD</a>
+                  <a href="/cart" class="inline-flex items-center justify-center p-2.5 relative font-semibold rounded-full border-2 bg-white/5 border-white/5 text-t-primary hover:bg-white/10 hover:text-t-primary transition-colors duration-300 ease-in-out">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 24 24"><path fill="currentColor" d="M7 22q-.825 0-1.412-.587T5 20..." /></svg>
+                    <span class="absolute -top-3 -right-3 inline-flex items-center justify-center size-[1.125rem] bg-accent-500 text-white text-[0.625rem] rounded-full">1</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <!-- Hero Section -->
+      <section id="hero" class="component">
+        <div class="relative flex justify-center items-center py-24 bg-center bg-cover">
+          <div class="m-auto absolute inset-0 -z-10 aspect-square rounded-full blur-[200px] bg-accent-500/50 max-w-4xl -translate-y-2/3 w-[65%]" aria-hidden="true"></div>
+          <div class="container relative flex gap-12 items-center px-4 flex-col md:flex-row md:justify-between">
+            <div class="flex flex-col gap-4 max-w-xl text-left">
+              <h1 class="text-5xl font-bold text-t-primary mb-4">KXZ Project</h1>
+              <p class="text-base text-t-primary/50 mb-4">Project KXZ is the number one destination for quality accounts, spoofers, cheats & more.</p>
+              <div class="flex flex-wrap items-center gap-4 mt-4 justify-start">
+                <a href="#products" class="inline-flex items-center gap-4 border-2 px-8 py-2.5 rounded-full font-semibold bg-accent-500 border-accent-500 text-t-accent hover:bg-accent-500/50 hover:text-t-primary transition-colors duration-300 ease-in-out">Our Products <i class="fas fa-angles-down fa-fw"></i></a>
+                <a href="https://discord.gg/ut6sPfR7jb" class="inline-flex items-center gap-4 border-2 px-8 py-2.5 rounded-full font-semibold bg-white/5 border-accent-500 text-t-primary hover:bg-accent-500/10 hover:text-t-primary transition-colors duration-300 ease-in-out">Our Discord <i class="fab fa-discord fa-fw"></i></a>
+              </div>
             </div>
           </div>
         </div>
-        <div
-          x-cloak
-          class="fixed inset-0 z-20 h-screen w-screen origin-bottom scale-y-0 bg-background/95 backdrop-blur-2xl transition duration-500 lg:hidden"
-          :class="{ 'origin-top scale-y-100': showMobileMenu }">
-        </div>
-        <div
-          x-cloak
-          x-ref="mobileMenu"
-          class="absolute top-full left-0 right-0 mx-auto z-20 w-[calc(100%-2rem)] origin-top translate-y-1 rounded-xl border-2 border-white/5 bg-white/5 p-6 transition-all duration-300 lg:hidden"
-          :class="`${showMobileMenu ? 'visible scale-100 opacity-100' : 'invisible scale-95 opacity-0'}`">
-          <div class="w-full text-gray-300">
-            <ul class="flex flex-col gap-6 font-medium tracking-wide">
-              
-              
-              
-              
-              
-              <li>
-                <a
-                  href="https://kxz.mysellauth.com/"
-                  target=""
-                  class="block transition text-accent-500 hover:text-t-primary"
-                >
-                  HOME
-                </a>
-              </li>
-              
-              
-              
-              <li>
-                <a
-                  href="https://kxz.mysellauth.com/#products"
-                  target=""
-                  class="block transition text-gray-300 hover:text-t-primary"
-                >
-                  PRODUCTS
-                </a>
-              </li>
-              
-              
-              
-              <li>
-                <a
-                  href="https://kxz.mysellauth.com/feedback"
-                  target=""
-                  class="block transition text-gray-300 hover:text-t-primary"
-                >
-                  REVIEWS
-                </a>
-              </li>
-              
-              
-              
-              
-              <li>
-                <a
-                  href="https://customer.sellauth.com/kxz"
-                  target=""
-                  class="block transition text-gray-300 hover:text-t-primary"
-                >
-                  DASHBOARD
-                </a>
-              </li>
-              
-            </ul>
+      </section>
+
+      <!-- Products Section -->
+      <section id="products" class="component">
+        <div class="container mx-auto flex flex-col items-center text-center px-4 mb-16 lg:mb-32">
+          <div class="flex flex-col gap-4 max-w-md text-center mb-8">
+            <h2 class="text-5xl font-bold text-t-primary mb-4">OUR PRODUCTS</h2>
+            <p class="text-base text-t-primary/50 mb-4">FIND THE PERFECT PRODUCT FOR YOUR NEEDS.</p>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 w-full">
+            <a href="https://kxz.mysellauth.com/product/kxz-external" class="product-card">
+              <div class="relative aspect-video p-2 mb-4">
+                <img src="https://imagedelivery.net/HL_Fwm__tlvUGLZF2p74xw/58889ab2-2643-4e45-547a-57ddea277a00/public" class="rounded-lg aspect-video w-full object-cover" loading="lazy" />
+              </div>
+              <div class="text-left px-4 pb-4">
+                <h3 class="text-xl font-bold mb-2 truncate">KXZ [EXTERNAL]</h3>
+                <p class="text-base text-t-primary/50 mb-4">91 in stock</p>
+                <div class="flex justify-between items-center">
+                  <div class="inline-flex items-center gap-2 truncate">
+                    <span class="text-sm text-t-primary/50">Price</span>
+                    <span class="text-lg font-semibold text-t-primary/50 truncate">
+                      <span class="text-accent-500">€5.00 - €10.00</span>
+                      <span class="text-sm line-through">€15.00 - €20.00</span>
+                    </span>
+                  </div>
+                  <span class="text-accent-500"><i class="fas fa-check-circle"></i></span>
+                </div>
+              </div>
+            </a>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</nav>
-<script>
-  document.addEventListener('alpine:init', () => {
-    Alpine.data('navbar', () => ({
-      showMobileMenu: false,
-      toggleMobileMenu() {
-        this.showMobileMenu = !this.showMobileMenu;
+      </section>
 
-        if (this.showMobileMenu) {
-          document.body.style.overflow = 'hidden';
-        } else {
-          document.body.style.removeProperty('overflow');
-        }
-      },
-      init() {
-        // Close mobile menu when clicking outside or on a link.
-        document.addEventListener('click', (event) => {
-          if (!this.$refs.mobileMenuBtn) return;
-          if (!this.showMobileMenu) return;
-          if (this.$refs.mobileMenuBtn.contains(event.target)) return;
-
-          this.toggleMobileMenu();
-        });
-      },
-    }));
-  });
-</script>
-        </header>
-        <div class="components">
-  
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section id="hero" class="component" data-component-id="hero">
-  
-  
-  <div class="relative flex justify-center items-center py-24 bg-center bg-cover " style="">
-    
-    <div class="m-auto absolute inset-0 -z-10 aspect-square rounded-full blur-[200px] bg-accent-500/50 max-w-4xl -translate-y-2/3 w-[65%]" aria-hidden="true"></div>
-    
-    <div class="container relative flex gap-12 items-center px-4 flex-col md:flex-row md:justify-between">
-      <div class="flex flex-col gap-4 max-w-xl text-left">
-        
-        
-        <h1 class="text-5xl !leading-[1.125] font-bold text-t-primary mb-4" data-dsr>
-          KXZ Project
-        </h1>
-        
-        
-        <p class="text-base text-t-primary/50 mb-4" data-dsr>
-          Project KXZ is the number one destination for quality accounts, spoofers, cheats & more.
-        </p>
-        
-        
-        
-        <div class="flex flex-wrap items-center gap-4 mt-4 justify-start" data-dsr>
-          
-  
-  
-  
-  <a
-    href="#products"
-    target=""
-    class="inline-flex items-center gap-4 border-2 px-8 py-2.5 rounded-full font-semibold bg-accent-500 border-accent-500 text-t-accent hover:bg-accent-500/50 hover:text-t-primary transition-colors duration-300 ease-in-out">
-    Our Products
-    
-    <i class="fas fa-angles-down fa-fw"></i>
-    
-  </a>
-
-  
-  
-  
-  <a
-    href="https://discord.gg/ut6sPfR7jb"
-    target="blank"
-    class="inline-flex items-center gap-4 border-2 px-8 py-2.5 rounded-full font-semibold bg-white/5 border-accent-500 text-t-primary hover:bg-accent-500/10 hover:text-t-primary transition-colors duration-300 ease-in-out">
-    Our Discord
-    
-    <i class="fab fa-discord fa-fw"></i>
-    
-  </a>
-
-        </div>
-        
-      </div>
-      
-    </div>
-  </div>
-</section>
-  
-    <section
-  id="products"
-  class="component"
-  data-component-id="products"
-  x-data="{
-    openGroupModalId: null,
-    openGroupModal(id) {
-      this.openGroupModalId = id;
-      document.body.style.overflow = 'hidden';
-    },
-    closeGroupModal() {
-      this.openGroupModalId = null;
-      document.body.style.overflow = 'auto';
-    }
-  }">
-  <div class="container mx-auto flex flex-col items-center text-center px-4 mb-16 lg:mb-32">
-    
-    <div class="flex flex-col gap-4 max-w-md text-center mb-8">
-      
-      
-      <h2 class="text-5xl !leading-[1.125] font-bold text-t-primary" data-dsr>
-        OUR PRODUCTS
-      </h2>
-      
-      
-      <p class="text-base text-t-primary/50" data-dsr>
-        FIND THE PERFECT PRODUCT FOR YOUR NEEDS.
-      </p>
-      
-    </div>
-    
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 w-full">
-      
-        
-          
-            
-
-<a
-  class="border-2 border-white/5 rounded-xl bg-[rgba(255,255,255,0.01)] text-t-primary block hover:bg-[rgba(255,255,255,0.05)] transition-colors duration-300 ease-in-out"
-  href="https://kxz.mysellauth.com/product/kxz-external"
-  @click=""
-  data-dsr
->
-  <div class="relative aspect-video p-2 mb-4">
-    
-    <img src="https://imagedelivery.net/HL_Fwm__tlvUGLZF2p74xw/58889ab2-2643-4e45-547a-57ddea277a00/public" class="rounded-lg aspect-video w-full object-cover" loading="lazy" />
-    
-
-    
-  </div>
-  <div class="text-left px-4 pb-4">
-    <h3 class="text-xl font-bold mb-2 truncate">
-      KXZ [EXTERNAL]
-    </h3>
-    <p class="text-base text-t-primary/50 mb-4">
-      
-        
-        91 in stock
-        
-      
-    </p>
-
-    <div class="flex justify-between items-center">
-      <div class="inline-flex items-center gap-2 truncate">
-        <span class="text-sm text-t-primary/50">
-          Price
-        </span>
-        <span class="text-lg font-semibold text-t-primary/50 truncate">
-          <span class="text-accent-500">
-            
-            €5.00 - €10.00
-            
-          </span>
-
-          
-          
-          <span class="text-sm line-through">€15.00 - €20.00</span>
-          
-          
-        </span>
-      </div>
-      <span class="text-accent-500">
-        <svg xmlns="http://www.w3.org/2000/svg" class="size-9" viewBox="0 0 24 24"><path fill="currentColor" d="m12.2 13l-.9.9q-.275.275-.275.7t.275.7t.7.275t.7-.275l2.6-2.6q.3-.3.3-.7t-.3-.7l-2.6-2.6q-.275-.275-.7-.275t-.7.275t-.275.7t.275.7l.9.9H9q-.425 0-.712.288T8 12t.288.713T9 13zm-.2 9q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12t-2.325-5.675T12 4T6.325 6.325T4 12t2.325 5.675T12 20m0-8"/></svg>
-      </span>
-    </div>
-  </div>
-</a>
-          
-        
-      
-    </div>
-  </div>
-
-  
-  
-  
-</section>
-  
-    
-  
-
-
-
-
-<section id="video-gallery-1736038151990" class="component" data-component-id="video-gallery-1736038151990">
-  <div class="container mx-auto flex flex-col px-4 mb-16 lg:mb-32">
-    
-    <div class="flex flex-col gap-4 mb-8 text-center">
-      
-      
-      <h2 class="text-5xl !leading-[1.125] font-bold text-t-primary" data-dsr>
-        TOP SHOWCASE (COMMUNITY)
-      </h2>
-      
-      
-    </div>
-    
-
-    <div class="grid gap-8 grid-cols-1 md:grid-cols-3">
-      
-      
-      
-      <div class="flex justify-center aspect-video" data-dsr>
-        <lite-youtube videoid="O6zwguNHfWE" class="rounded-xl aspect-video"></lite-youtube>
-      </div>
-      
-      
-      
-      <div class="flex justify-center aspect-video" data-dsr>
-        <lite-youtube videoid="p9kFUo1CcdE" class="rounded-xl aspect-video"></lite-youtube>
-      </div>
-      
-      
-      
-      <div class="flex justify-center aspect-video" data-dsr>
-        <lite-youtube videoid="ZOubPs83ZaM" class="rounded-xl aspect-video"></lite-youtube>
-      </div>
-      
-    </div>
-  </div>
-</section>
-  
-    <section id="socials-1736002626788" class="component" data-component-id="socials-1736002626788">
-  <div class="container mx-auto flex flex-col px-4 mb-16 lg:mb-32">
-    
-    <div class="flex flex-col gap-4 mb-8 text-center">
-      
-      
-      <h2 class="text-5xl !leading-[1.125] font-bold text-t-primary" data-dsr>
-        CONTACT US
-      </h2>
-      
-      
-    </div>
-    
-
-    <div class="p-8 rounded-xl border-2 border-white/5 bg-black/5 backdrop-blur-2xl overflow-hidden relative lg:p-16" data-dsr>
-      <div class="mx-auto absolute -z-10 aspect-square rounded-full -translate-y-1/3 left-0 top-0 -translate-x-1/3 blur-3xl bg-accent-500/40 w-[10%]" aria-hidden="true"></div>
-      <div class="grid grid-cols-1 gap-8 sm:grid-cols-[repeat(auto-fit,_minmax(12rem,_1fr))]">
-        
-        <a href="https://discord.gg/ut6sPfR7jb" target="_blank" class="flex flex-col items-center gap-4 text-t-primary hover:text-accent-500">
-          <span class="inline-flex justify-center items-center size-12 rounded-xl relative overflow-hidden bg-accent-500/20 border border-accent-500 text-accent-500">
-            <i class="fab fa-discord fa-fw"></i>
-          </span>
-          <div class="flex-1">
-            <h4 class="text-lg font-semibold">
-              Discord
-            </h4>
-          </div>
-        </a>
-        
-      </div>
-    </div>
-  </div>
-</section>
-  
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section id="text-image-block-1745076470646" class="component" data-component-id="text-image-block-1745076470646">
-  <div class="container mx-auto px-4 mb-16 lg:mb-32">
-    
-    <div class="flex flex-col gap-4 mb-8 ">
-      
-      
-      <h2 class="text-5xl !leading-[1.125] font-bold text-t-primary" data-dsr>
-        Download Free Cheat
-      </h2>
-      
-      
-    </div>
-    
-
-    <div class="" data-dsr>
-      <div class="flex gap-8 flex-col lg:flex-row">
-        <div class="flex flex-col gap-8 max-w-5xl text-left">
-          <p class="text-base text-t-primary/50" data-dsr>
-            This is a text & image block.
-          </p>
-          
-          <div class="flex flex-wrap items-center gap-4 justify-start" data-dsr>
-            
-  
-  
-  
-  <a
-    href="#"
-    target=""
-    class="inline-flex items-center gap-4 border-2 px-8 py-2.5 rounded-full font-semibold bg-accent-500 border-accent-500 text-t-accent hover:bg-accent-500/50 hover:text-t-primary transition-colors duration-300 ease-in-out">
-    Install Now
-    
-    <i class="fas fa-download fa-fw"></i>
-    
-  </a>
-
-  
-  
-  
-  <a
-    href="#"
-    target=""
-    class="inline-flex items-center gap-4 border-2 px-8 py-2.5 rounded-full font-semibold bg-white/5 border-white/5 text-t-primary hover:bg-white/10 hover:text-t-primary transition-colors duration-300 ease-in-out">
-    Tutorial
-    
-    <i class="fab fa-youtube fa-fw"></i>
-    
-  </a>
-
-          </div>
-          
-        </div>
-        <div>
-          <img src="" alt="" class="w-full aspect-video object-scale-down rounded-xl zoomable" loading="lazy" data-dsr>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-  
-</div>
-      </div>
-      
-<footer class="component" data-component-id="footer">
-  <div class="px-4 py-12 lg:py-24 bg-black/10 backdrop-blur-2xl overflow-hidden relative">
-    <div class="m-auto absolute inset-0 -z-10 aspect-square rounded-full blur-[200px] bg-accent-500/50 max-w-4xl translate-y-[70%] w-[65%]" aria-hidden="true"></div>
-    <div class="container mx-auto text-t-primary">
-      <div class="flex flex-col gap-8 lg:flex-row lg:gap-32">
-        <div class="flex-1">
-          
-          <div class="mb-4">
-            
-            
-            <p class="text-xl font-bold text-t-primary">KXZ Project</p>
-            
-          </div>
-          
-          
-          <div>
-            
-            <p class="text-t-primary/50 text-sm">
-              © 2025, KXZ Project
-            </p>
-            
+      <!-- Footer Section -->
+      <footer class="component">
+        <div class="px-4 py-12 lg:py-24 bg-black/10 backdrop-blur-2xl overflow-hidden relative">
+          <div class="container mx-auto text-t-primary">
+            <div class="flex flex-col gap-8 lg:flex-row lg:gap-32">
+              <div class="flex-1">
+                <p class="text-xl font-bold text-t-primary">KXZ Project</p>
+                <p class="text-t-primary/50 text-sm">© 2025, KXZ Project</p>
+              </div>
+              <div class="flex-1">
+                <p class="text-xl font-bold text-t-primary mb-4">Navigation</p>
+                <ul class="nav flex-column">
+                  <li><a href="/" class="text-t-primary/50 hover:text-t-primary">Home</a></li>
+                  <li><a href="#products" class="text-t-primary/50 hover:text-t-primary">Products</a></li>
+                  <li><a href="/feedback" class="text-t-primary/50 hover:text-t-primary">Reviews</a></li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-        
-        <div class="flex-1">
-          <p class="text-xl font-bold text-t-primary mb-4">Navigation</p>
-          <ul class="nav flex-column">
-            
-            <li class="nav-item mb-2">
-              <a
-                href="./"
-                target=""
-                class="text-t-primary/50 hover:text-t-primary"
-                >Home</a
-              >
-            </li>
-            
-            <li class="nav-item mb-2">
-              <a
-                href="./#products"
-                target=""
-                class="text-t-primary/50 hover:text-t-primary"
-                >Products</a
-              >
-            </li>
-            
-            <li class="nav-item mb-2">
-              <a
-                href="./feedback"
-                target=""
-                class="text-t-primary/50 hover:text-t-primary"
-                >Reviews</a
-              >
-            </li>
-            
-          </ul>
-        </div>
-        
-        
-      </div>
-    </div>
-  </div>
-</footer>
-
+      </footer>
     </div>
 
-    <script>
-      document.addEventListener('alpine:init', () => {
-        Alpine.data('app', () => ({
-          appCart: {
-            items: [],
-            updateLocalStorage: function () {
-              localStorage.setItem('cart', JSON.stringify(this.items));
-            },
-            set: function (items) {
-              this.items = items;
-
-              this.updateLocalStorage();
-            },
-            add: function (productId, variantId, quantity) {
-              const item = this.items.find((item) => item.variantId === variantId);
-
-              if (item) {
-                item.quantity += quantity;
-              } else {
-                this.items.push({ productId, variantId, quantity });
-              }
-
-              this.updateLocalStorage();
-            },
-            remove: function (variantId) {
-              this.items = this.items.filter((item) => item.variantId !== variantId);
-
-              this.updateLocalStorage();
-            },
-            editQuantity: function (variantId, quantity) {
-              const item = this.items.find((item) => item.variantId === variantId);
-              item.quantity = quantity;
-
-              this.updateLocalStorage();
-            },
-            get countWithQuantities() {
-              return this.items.reduce((acc, item) => acc + item.quantity, 0);
-            },
-            init: function () {
-              if (localStorage.getItem('cart')) {
-                try {
-                  this.items = JSON.parse(localStorage.getItem('cart'));
-                  if (!Array.isArray(this.items)) {
-                    this.items = [];
-                  }
-                } catch (error) {
-                  console.error('Error parsing cart from local storage', error);
-                  this.items = [];
-                }
-              }
-            }
-          },
-
-          init: function () {
-            this.appCart.init();
-          }
-        }));
-      });
-    </script>
-    
-    
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/alpinejs-masonry@1.0.15/dist/masonry.min.js"
-      integrity="sha256-n3pRIWHXpKBr1FSI75nD5bgEoXDZ8/rS2k9/WHLVk2E="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.3/dist/cdn.min.js"
-      integrity="sha256-aJ9ROXjRHWn00zeU9ylsmlhqLlXeebtEfN28P0dPnwc="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/smooth-zoom@1.4.1/dist/zoom.min.js"
-      integrity="sha256-tDqoItrR4Xx5ox4AIBUmsQAF45Vp4wW2oy+HVOrqirI="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"
-      integrity="sha256-FZsW7H2V5X9TGinSjjwYJ419Xka27I8XPDmWryGlWtw="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/choices.js@10.2.0/public/assets/scripts/choices.min.js"
-      integrity="sha256-P+JgcxEeZtxwYS1+TAAuusKFM646SB8Oodk0TYu9zuo="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.3.3/src/lite-yt-embed.js"
-      integrity="sha256-t8Thbv2D6x0AC5rMk+Ydz589Zq4lp8ZC4iVfNNdxs5U="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="/assets/69444/script.js?v=1739700631583"
-      crossorigin="anonymous"
-    ></script>
-
-    
-    <script src="./assets/js/particles.js"></script>
-    <div id="particles-div" style="position: fixed; inset: 0; z-index: -1; pointer-events: none;"></div>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script src="https://exodusmenu.pro/resource/js/particles.js"></script>
-    
-
-    
-
-
-
-
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.3/dist/cdn.min.js" integrity="sha256-aJ9ROXjRHWn00zeU9ylsmlhqLlXeebtEfN28P0dPnwc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/smooth-zoom@1.4.1/dist/zoom.min.js" integrity="sha256-tDqoItrR4Xx5ox4AIBUmsQAF45Vp4wW2oy+HVOrqirI=" crossorigin="anonymous"></script>
   </body>
 </html>
