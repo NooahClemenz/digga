@@ -1,4 +1,4 @@
-/* reset.css - Normalize the default styles */
+/* reset.css - Normalize default styles */
 
 *,
 *::before,
@@ -27,7 +27,6 @@ img {
   height: auto;
 }
 
-/* Ensure that inputs, buttons and form elements have no border */
 input, textarea, button {
   border: none;
   outline: none;
@@ -38,7 +37,6 @@ button {
   cursor: pointer;
 }
 
-/* Remove the default styles for fieldsets */
 fieldset {
   border: none;
 }
