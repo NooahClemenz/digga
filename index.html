@@ -3,23 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Panel</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Meine Video-Website</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="login-container">
-        <h2>Willkommen zurück!</h2>
-        <form action="login.php" method="POST">
-            <div class="input-group">
-                <label for="username">Benutzername:</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div class="input-group">
-                <label for="password">Passwort:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <button type="submit">Einloggen</button>
-        </form>
-    </div>
+    <header>
+        <div class="logo">
+            <h1>Meine Video-Website</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Startseite</a></li>
+                <li><a href="#">Videos</a></li>
+                <li><a href="#">Abonnieren</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="video-list">
+            <article class="video-item">
+                <img src="https://via.placeholder.com/320x180" alt="Video Thumbnail">
+                <h2>Video Titel 1</h2>
+                <p>Beschreibung des Videos</p>
+                <button>Jetzt ansehen</button>
+            </article>
+            <article class="video-item">
+                <img src="https://via.placeholder.com/320x180" alt="Video Thumbnail">
+                <h2>Video Titel 2</h2>
+                <p>Beschreibung des Videos</p>
+                <button>Jetzt ansehen</button>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Meine Video-Website. Alle Rechte vorbehalten.</p>
+    </footer>
 </body>
 </html>
