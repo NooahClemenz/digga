@@ -1,137 +1,43 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="KXZ Project - Quality accounts, spoofers, cheats & more" />
-    <title>KXZ Project</title>
-
-    <!-- Link to external stylesheets -->
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="built.css" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="custom.css" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="theme-color" content="#000000"/>
+    <meta name="description" content="TZ Project - Advanced gaming enhancements for competitive players, providing optimized performance and precision tools."/>
+    <link rel="icon" href="/assets/tzico.png?version=02042025"/>
+    <link rel="apple-touch-icon" href="/assets/tzico.png?version=02042025"/>
     
-    <link rel="icon" href="https://imagedelivery.net/HL_Fwm__tlvUGLZF2p74xw/5fc2cc0e-09aa-4540-ff1d-37a163486100/public" type="image/png" />
-    <meta property="og:title" content="KXZ Project" />
-    <meta property="og:description" content="The number one destination for quality accounts, spoofers, cheats & more." />
-    <meta property="og:image" content="https://imagedelivery.net/HL_Fwm__tlvUGLZF2p74xw/5fc2cc0e-09aa-4540-ff1d-37a163486100/public" />
-    <meta name="theme-color" content="#7800d2" />
+    <!-- Preload fonts and images -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=YourFontFamily&display=swap" as="style">
+    <link rel="preload" href="assets/imgh.webp?version=02042025" as="image">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=YourFontFamily&display=swap">
+    <link href="/static/css/main.4201d3a0.css?version=02042025" rel="stylesheet">
 
-    <!-- Fonts and other external resources -->
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+    <!-- Google Tag Manager & Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0E39W7K2N6" type="text/javascript"></script>
+    <script type="text/javascript">
+      function gtag(){dataLayer.push(arguments)}
+      window.dataLayer = window.dataLayer || [];
+      gtag("js", new Date());
+      gtag("config", "G-0E39W7K2N6");
+    </script>
+
+    <!-- hCaptcha -->
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+
+    <title>TZ Project - Advanced Gaming Enhancements & Competitive Tools</title>
+
+    <!-- Main JavaScript -->
+    <script defer src="/static/js/main.0d75d1f1.js?version=02042025" type="text/javascript"></script>
+
+    <!-- Cloudflare Rocket Loader -->
+    <script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="3efbc228ec6f5bf368218a62-|49" defer></script>
   </head>
 
-  <body class="dSR">
-    <div class="flex flex-col justify-between min-h-screen relative" id="app">
-      <header class="sticky top-0 z-[1]">
-        <div class="announcement component hidden">
-          <div class="p-2 bg-accent-500 text-t-accent text-sm text-center relative z-30">
-            <!-- Announcement Section -->
-          </div>
-        </div>
-
-        <!-- Navigation -->
-        <nav>
-          <div class="bg-background/50 backdrop-blur-2xl shadow-md">
-            <div class="mx-auto max-w-screen-2xl p-4">
-              <div class="flex justify-between items-center">
-                <a href="/" class="flex justify-start items-center gap-4">
-                  <img src="https://imagedelivery.net/HL_Fwm__tlvUGLZF2p74xw/5fc2cc0e-09aa-4540-ff1d-37a163486100/public" alt="KXZ Project" class="max-h-10 rounded-lg" />
-                </a>
-
-                <div class="hidden lg:flex justify-center items-center gap-2">
-                  <a href="/" class="px-6 py-2 rounded-full text-base font-medium border-2 text-gray-100 border-transparent hover:text-t-primary">HOME</a>
-                  <a href="#products" class="px-6 py-2 rounded-full text-base font-medium border-2 text-t-primary/70 opacity-50 border-transparent hover:opacity-100">PRODUCTS</a>
-                  <a href="/feedback" class="px-6 py-2 rounded-full text-base font-medium border-2 text-t-primary/70 opacity-50 border-transparent hover:opacity-100">REVIEWS</a>
-                </div>
-
-                <div class="hidden lg:flex justify-end items-center gap-4">
-                  <a href="/dashboard" class="px-6 py-2 rounded-full inline-flex items-center gap-4 border-2 font-semibold bg-accent-500 border-accent-500 text-t-accent hover:bg-accent-500/50 hover:text-t-primary transition-colors duration-300 ease-in-out">DASHBOARD</a>
-                  <a href="/cart" class="inline-flex items-center justify-center p-2.5 relative font-semibold rounded-full border-2 bg-white/5 border-white/5 text-t-primary hover:bg-white/10 hover:text-t-primary transition-colors duration-300 ease-in-out">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 24 24"><path fill="currentColor" d="M7 22q-.825 0-1.412-.587T5 20..." /></svg>
-                    <span class="absolute -top-3 -right-3 inline-flex items-center justify-center size-[1.125rem] bg-accent-500 text-white text-[0.625rem] rounded-full">1</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </header>
-
-      <!-- Hero Section -->
-      <section id="hero" class="component">
-        <div class="relative flex justify-center items-center py-24 bg-center bg-cover">
-          <div class="m-auto absolute inset-0 -z-10 aspect-square rounded-full blur-[200px] bg-accent-500/50 max-w-4xl -translate-y-2/3 w-[65%]" aria-hidden="true"></div>
-          <div class="container relative flex gap-12 items-center px-4 flex-col md:flex-row md:justify-between">
-            <div class="flex flex-col gap-4 max-w-xl text-left">
-              <h1 class="text-5xl font-bold text-t-primary mb-4">KXZ Project</h1>
-              <p class="text-base text-t-primary/50 mb-4">Project KXZ is the number one destination for quality accounts, spoofers, cheats & more.</p>
-              <div class="flex flex-wrap items-center gap-4 mt-4 justify-start">
-                <a href="#products" class="inline-flex items-center gap-4 border-2 px-8 py-2.5 rounded-full font-semibold bg-accent-500 border-accent-500 text-t-accent hover:bg-accent-500/50 hover:text-t-primary transition-colors duration-300 ease-in-out">Our Products <i class="fas fa-angles-down fa-fw"></i></a>
-                <a href="https://discord.gg/ut6sPfR7jb" class="inline-flex items-center gap-4 border-2 px-8 py-2.5 rounded-full font-semibold bg-white/5 border-accent-500 text-t-primary hover:bg-accent-500/10 hover:text-t-primary transition-colors duration-300 ease-in-out">Our Discord <i class="fab fa-discord fa-fw"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Products Section -->
-      <section id="products" class="component">
-        <div class="container mx-auto flex flex-col items-center text-center px-4 mb-16 lg:mb-32">
-          <div class="flex flex-col gap-4 max-w-md text-center mb-8">
-            <h2 class="text-5xl font-bold text-t-primary mb-4">OUR PRODUCTS</h2>
-            <p class="text-base text-t-primary/50 mb-4">FIND THE PERFECT PRODUCT FOR YOUR NEEDS.</p>
-          </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 w-full">
-            <a href="https://kxz.mysellauth.com/product/kxz-external" class="product-card">
-              <div class="relative aspect-video p-2 mb-4">
-                <img src="https://imagedelivery.net/HL_Fwm__tlvUGLZF2p74xw/58889ab2-2643-4e45-547a-57ddea277a00/public" class="rounded-lg aspect-video w-full object-cover" loading="lazy" />
-              </div>
-              <div class="text-left px-4 pb-4">
-                <h3 class="text-xl font-bold mb-2 truncate">KXZ [EXTERNAL]</h3>
-                <p class="text-base text-t-primary/50 mb-4">91 in stock</p>
-                <div class="flex justify-between items-center">
-                  <div class="inline-flex items-center gap-2 truncate">
-                    <span class="text-sm text-t-primary/50">Price</span>
-                    <span class="text-lg font-semibold text-t-primary/50 truncate">
-                      <span class="text-accent-500">€5.00 - €10.00</span>
-                      <span class="text-sm line-through">€15.00 - €20.00</span>
-                    </span>
-                  </div>
-                  <span class="text-accent-500"><i class="fas fa-check-circle"></i></span>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Footer Section -->
-      <footer class="component">
-        <div class="px-4 py-12 lg:py-24 bg-black/10 backdrop-blur-2xl overflow-hidden relative">
-          <div class="container mx-auto text-t-primary">
-            <div class="flex flex-col gap-8 lg:flex-row lg:gap-32">
-              <div class="flex-1">
-                <p class="text-xl font-bold text-t-primary">KXZ Project</p>
-                <p class="text-t-primary/50 text-sm">© 2025, KXZ Project</p>
-              </div>
-              <div class="flex-1">
-                <p class="text-xl font-bold text-t-primary mb-4">Navigation</p>
-                <ul class="nav flex-column">
-                  <li><a href="/" class="text-t-primary/50 hover:text-t-primary">Home</a></li>
-                  <li><a href="#products" class="text-t-primary/50 hover:text-t-primary">Products</a></li>
-                  <li><a href="/feedback" class="text-t-primary/50 hover:text-t-primary">Reviews</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.3/dist/cdn.min.js" integrity="sha256-aJ9ROXjRHWn00zeU9ylsmlhqLlXeebtEfN28P0dPnwc=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/smooth-zoom@1.4.1/dist/zoom.min.js" integrity="sha256-tDqoItrR4Xx5ox4AIBUmsQAF45Vp4wW2oy+HVOrqirI=" crossorigin="anonymous"></script>
+  <body>
+    <div id="root"></div>
   </body>
 </html>
