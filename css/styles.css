@@ -1,52 +1,101 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+/* CSS Reset: entfernt Standardstile der meisten Browser */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-.login-container {
-    background-color: white;
+/* Grundstile für den Body */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header-Stile */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    font-size: 24px;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hauptinhalt */
+main {
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    border-radius: 5px;
 }
 
-h2 {
+/* Video-Liste */
+.video-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.video-item {
+    background-color: white;
+    padding: 15px;
+    width: 320px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-.input-group {
-    margin-bottom: 15px;
-}
-
-.input-group label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.input-group input {
+.video-item img {
     width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
+.video-item h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.video-item p {
+    font-size: 14px;
+    color: #555;
+}
+
+.video-item button {
+    background-color: #007BFF;
     color: white;
     border: none;
-    border-radius: 5px;
+    padding: 10px;
     cursor: pointer;
+    border-radius: 5px;
 }
 
-button:hover {
-    background-color: #45a049;
+.video-item button:hover {
+    background-color: #0056b3;
 }
+
+/* Footer-Stile */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+s
