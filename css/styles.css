@@ -1,44 +1,53 @@
-/* styles.css - Contains color schemes, typography, and other design fundamentals */
-
-:root {
-  --cl-accent: 120, 0, 210;
-  --cl-background: 5, 5, 5;
-  --cl-t-primary: 255, 255, 255;
-  --cl-t-accent: 255, 255, 255;
-}
+/* styles.css - Basic styles for structure and layout */
 
 body {
-  font-family: 'Exo 2', sans-serif;
-  background-color: rgb(5, 5, 5);
-}
-
-.text-t-primary {
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.text-t-accent {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.bg-accent-500 {
-  background-color: rgba(120, 0, 210, 1);
-}
-
-.text-accent-500 {
-  color: rgba(120, 0, 210, 1);
-}
-
-/* For buttons */
-button, a {
-  border-radius: 4px;
-  padding: 10px 20px;
-  font-size: 1rem;
+  font-family: 'YourFontFamily', sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
 }
 
 a {
+  color: #007BFF;
   text-decoration: none;
 }
 
-button:hover, a:hover {
-  opacity: 0.7;
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
 }
